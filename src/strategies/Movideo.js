@@ -9,14 +9,14 @@ export default class Movideo extends AuthorizationStrategy {
     super();
     this.cache = cache;
   }
-  getUserAuthorizationStatus(key) {
+  getUserAuthorizationStatus(key,callback) {
 
     this.cache.exists(key).subscribe(result => {
       if(result === -1){
-        return false;   // User is authorized
+        callback(true);   // User is authorized
       }
       else{
-        return true;		// User is not authorized
+        callback(false);		// User is not authorized
       }
    });
  }

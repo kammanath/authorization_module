@@ -24,6 +24,6 @@ export default class AuthorizationStrategyy extends Strategy {
   @param sessionid
   @returns authorization status
   **/
-   getUserAuthorizationStatus(key) {}
+   getUserAuthorizationStatus(key,callback) {}
 
 }
