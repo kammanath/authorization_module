@@ -1,0 +1,26 @@
+{
+  "name": "baracus-authorization",
+  "version": "0.1.0",
+  "description": "Authorization strategy for Baracus",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel ./src -d lib --ignore '__tests__'",
+    "just-test": "mocha --compilers js:babel/register",
+    "test": "npm run compile && npm run just-test",
+    "preinstall": "npm run compile"
+  },
+  "keywords": [
+    "feature",
+    "detection"
+  ],
+  "author": "kammanath@movideo.com",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
